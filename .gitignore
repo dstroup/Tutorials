@@ -17,6 +17,10 @@
 ipch
 Thumbs.db
 
+# Build results
+[Bb]in/
+[Oo]bj/
+
 Content/Integration/DirectX9/_temp
 Content/Integration/DirectX9/Debug
 Content/Integration/DirectX9/Release
