@@ -1,0 +1,68 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <RootNamespace>Buttons</RootNamespace>
+   <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>TRACE;DEBUG;NOESIS</DefineConstants>
+    <DebugType>portable</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <DefineConstants>TRACE;NOESIS</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Src\App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\Src\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\Src\Properties\AssemblyInfo.cs">
+      <Link>Properties\AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Src\ViewModel.cs">
+      <Link>ViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Src\DelegateCommand.cs">
+      <Link>DelegateCommand.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\..\Src\App.xaml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\Src\MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\Src\ControlResources.xaml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\Src\AudioClick.mp3">
+      <Link>AudioClick.mp3</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\Src\AudioSlide.mp3">
+      <Link>AudioSlide.mp3</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\Src\Aero Matics Regular.ttf">
+      <Link>Aero Matics Regular.ttf</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Noesis.App.Displays.Win32" Version="2.2.1" />
+    <PackageReference Include="Noesis.App.Displays.X11" Version="2.2.1" />
+    <PackageReference Include="Noesis.App.RenderContexts.D3D11" Version="2.2.1" />
+    <PackageReference Include="Noesis.App.RenderContexts.EGL" Version="2.2.1" />
+    <PackageReference Include="Noesis.App.RenderContexts.GLX" Version="2.2.1" />
+    <PackageReference Include="Noesis.App.RenderContexts.WGL" Version="2.2.1" />
+    <PackageReference Include="OpenGL.Net" Version="0.8.4" />
+  </ItemGroup>
+</Project>
