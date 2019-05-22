@@ -28,7 +28,8 @@ namespace Buttons
     {
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
             {
-                return new RenderContextGLX();
+                //return new RenderContextGLX();
+                return new RenderContextEGL();
             }
             else if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             {

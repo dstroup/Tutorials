@@ -11,7 +11,8 @@ namespace Buttons
 
         protected override RenderContext CreateRenderContext()
         {
-            return new RenderContextGLX();
+            return new RenderContextEGL();
+            //return new RenderContextGLX();
         }
 
         static void Main(string[] args)
