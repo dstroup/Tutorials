@@ -21,15 +21,7 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
-    <EmbeddedResource Include="..\..\Src\**\*.xaml" Exclude="obj\**" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="..\..\Src\**\*.cs" Exclude="obj\**;**\Settings.Designer.cs" />
-    <Compile Update="..\..\Src\**\*.xaml.cs">
-      <DependentUpon>%(Filename)</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <!--<Compile Include="..\..\Src\App.xaml.cs">
+  <Compile Include="..\..\Src\App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="..\..\Src\MainWindow.xaml.cs">
@@ -43,10 +35,10 @@
     </Compile>
     <Compile Include="..\..\Src\DelegateCommand.cs">
       <Link>DelegateCommand.cs</Link>
-    </Compile>-->
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <!--<EmbeddedResource Include="..\..\Src\App.xaml">
+    <EmbeddedResource Include="..\..\Src\App.xaml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="..\..\Src\MainWindow.xaml">
@@ -54,7 +46,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="..\..\Src\ControlResources.xaml">
       <SubType>Designer</SubType>
-    </EmbeddedResource>-->
+    </EmbeddedResource>
     <EmbeddedResource Include="..\..\Src\AudioClick.mp3">
       <Link>AudioClick.mp3</Link>
     </EmbeddedResource>
@@ -73,27 +65,5 @@
     <PackageReference Include="Noesis.App.RenderContexts.GLX" Version="2.2.1" />
     <PackageReference Include="Noesis.App.RenderContexts.WGL" Version="2.2.1" />
     <PackageReference Include="OpenGL.Net" Version="0.8.4" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Update="..\..\Src\App.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="..\..\Src\ControlResources.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="..\..\Src\MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <None Update="..\..\Src\App.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </None>
-    <None Update="..\..\Src\ControlResources.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </None>
-    <None Update="..\..\Src\MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </None>
   </ItemGroup>
 </Project>
